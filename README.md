@@ -51,7 +51,7 @@ virtual_ipaddress {
 vrrp_instance main {
 state MASTER
 interface enp0s3
-virtual_router_id 10
+virtual_router_id 11
 priority 110
 advert_int 4
 authentication {
@@ -107,5 +107,19 @@ virtual_ipaddress {
 найдите пакеты ICMP, в которых будет отображён процесс изменения MAC-адреса одной ноды на другой.
 Пришлите скриншот до и после выключения интерфейса из Wireshark.
 
-![Prometheus2](https://github.com/gaming4funNel/srlb-homework-9-05/blob/master/img/docker_dashboard.png)
 
+До отключения мастера
+
+![Keepalived](https://github.com/gaming4funNel/srlb-homework-10-01/blob/master/img/before_off.png)
+
+После отключения мастера
+
+![Keepalived](https://github.com/gaming4funNel/srlb-homework-10-01/blob/master/img/after_off.png)
+
+Пакет, с пингом на MAC первой машины
+
+![Keepalived](https://github.com/gaming4funNel/srlb-homework-10-01/blob/master/img/before_backet.png)
+
+Пакет, с пингом на MAC второй машины, после отключения мастера
+
+![Keepalived](https://github.com/gaming4funNel/srlb-homework-10-01/blob/master/img/after_packet.png)
